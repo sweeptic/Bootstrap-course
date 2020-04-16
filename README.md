@@ -9,3 +9,5 @@ Created by Brad Traversy
 Last updated 6/2018
  English
  English [Auto-generated], French [Auto-generated], 5 more
+
+ 027 Grid Alignment
