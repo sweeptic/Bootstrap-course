@@ -1,0 +1,64 @@
+:root {
+    --color-primary: #008ed6;
+    /* --color-primary-light: #FF3366; */
+    /* --color-primary-dark: #BA265D; */
+
+    /* --color-grey-light-1: #faf9f9;
+    --color-grey-light-2: #f4f2f2;
+    --color-grey-light-3: #f0eeee;
+    --color-grey-light-4: #ccc;
+    
+    --color-grey-dark-1: #333;
+    --color-grey-dark-2: #777;
+    --color-grey-dark-3: #999;
+
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-grey-light-2); */
+}
+
+
+
+body{
+    background-color: #333;
+    color: white;
+}
+
+.navbar {
+    border-bottom: var(--color-primary) 3px solid;
+    opacity: 0.8;
+}
+
+#home-section {
+    background: url(../img/home.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 44rem;
+    /* min-height: 700px; */
+}
+
+#home-section .dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 44rem;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#home-section .home-inner {
+    padding-top: 9.375rem;
+}
+
+#home-section .card-form {
+    opacity: 0.8;
+}
+
+#home-section .fas {
+    color: var(--color-primary);
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
