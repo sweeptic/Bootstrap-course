@@ -1,27 +1,31 @@
 :root {
     --color-primary: #008ed6;
-    /* --color-primary-light: #FF3366; */
-    /* --color-primary-dark: #BA265D; */
+    --color-grey-dark-1: #333;
 
-    /* --color-grey-light-1: #faf9f9;
+/* 
+     --color-primary-light: #FF3366; 
+     --color-primary-dark: #BA265D; 
+
+     --color-grey-light-1: #faf9f9;
     --color-grey-light-2: #f4f2f2;
     --color-grey-light-3: #f0eeee;
     --color-grey-light-4: #ccc;
     
-    --color-grey-dark-1: #333;
+    
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
 
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
     --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
 
-    --line: 1px solid var(--color-grey-light-2); */
+    --line: 1px solid var(--color-grey-light-2); 
+     */
 }
 
 
 
 body{
-    background-color: #333;
+    background-color: var(--color-grey-dark-1);
     color: white;
 }
 
@@ -59,6 +63,13 @@ body{
 #home-section .fas {
     color: var(--color-primary);
     background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* explore section */
+#explore-section .fas, #share-section .fas {
+    background-color: var(--color-grey-dark-1);
     padding: 5px;
     border-radius: 5px;
 }
