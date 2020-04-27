@@ -20,9 +20,9 @@
   <title>Bootstrap Theme</title>
 </head>
 
-<body>
+<body id="home" data-spy="scroll" data-target="#main-nav">
   <!-- START HERE -->
-  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4">
+  <nav class="navbar navbar-expand-md navbar-light fixed-top py-4" id="main-nav">
     <div class="container">
       <a href="#home" class="navbar-brand">
         <img src="img/mlogo.png" width="50" height="50" alt="">
@@ -354,11 +354,69 @@
             </div>
           </div>
         </div>
-
-
       </div>
     </div>
   </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9">
+          <h3>Get In Touch</h3>
+          <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus, ut! Officia,
+            laudantium! Sit error itaque aspernatur nulla! Corrupti, laudantium hic!</p>
+          <form>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-user">
+                  </i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Name">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-envelope">
+                  </i>
+                </span>
+              </div>
+              <input type="text" class="form-control" placeholder="Email">
+            </div>
+            <div class="input-group input-group-lg mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="fas fa-pencil-alt">
+                  </i>
+                </span>
+              </div>
+              <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+            </div>
+            <input type="submit" value="submit" class="btn btn-primary btn-block btn-lg">
+          </form>
+        </div>
+        <div class="col-lg-3 align-self-center">
+          <img src="img/mlogo.png" alt="" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="py-5 bg-primary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-6 ml-auto">
+          <p class="lead">
+            Copyright &copy; <span id="year"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
 
 
 
@@ -375,6 +433,31 @@
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
+
+
+    // init scrollspy
+    $('body').scrollspy({target: '#main-nav'});
+
+    // smooth scrolling
+    
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+
+
+
   </script>
 </body>
 
