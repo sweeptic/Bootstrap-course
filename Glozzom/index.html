@@ -150,21 +150,49 @@
   <section id="info" class="info py-3">
     <div class="container">
       <div class="row">
-
         <div class="col-md-6 align-self-center">
           <h3>Lorem, ipsum.</h3>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis voluptatibus architecto dolore soluta
             ducimus quam enim incidunt culpa in beatae!</p>
           <a href="about.html" class="btn btn-outline-danger btn-lg">Learn More</a>
         </div>
-
         <div class="col-md-6">
           <img src="img/laptop.png" alt="" class="img-fluid">
         </div>
-
       </div>
     </div>
   </section>
+
+  <!-- VIDEO PLAY -->
+  <section id="video-play">
+    <div class="dark-overlay">
+      <div class="row">
+        <div class="col">
+          <div class="container p-5">
+            <a href="#" class="video" data-video="https://youtu.be/Bz2Z0Mwp49Y" data-toggle="modal"
+              data-target="#videoModal">
+              <i class="fas fa-play fa-3x mb-5"></i>
+              <h1>See What We Do</h1>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO-MODAL -->
+  <div class="modal fade" id="videoModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <button class="close" data-dismiss="modal">
+            <span>&times;</span>
+          </button>
+          <iframe src="" frameborder="0" height="350" width="100%" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
@@ -200,6 +228,20 @@
       interval: 6000,
       pause: 'hover'
     })
+
+    // Video Play
+    $(function () {
+      // Auto play modal video
+      $(".video").click(function () {
+        var theModal = $(this).data("target"),
+          videoSRC = $(this).attr("data-video"),
+          videoSRCauto = videoSRC + "?modestbranding=1&rel=0&controls=0&showinfo=0&html5=1&autoplay=1";
+        $(theModal + ' iframe').attr('src', videoSRCauto);
+        $(theModal + ' button.close').click(function () {
+          $(theModal + ' iframe').attr('src', videoSRC);
+        });
+      });
+    });
 
   </script>
 </body>
