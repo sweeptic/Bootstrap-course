@@ -2,8 +2,6 @@ body {
     overflow-x: hidden;
 }
 
-
-
 .navbar .nav-link {
     font-size: 14px;
     text-transform: uppercase;
@@ -15,31 +13,29 @@ body {
     border-left: #444 3px solid;
 }
 
-.carousel-item  {
+.carousel-item {
     height: 450px;
 }
 
 .carousel-image-1 {
-    background: url('../img/image1.jpg');
+    background: url("../img/image1.jpg");
     background-size: cover;
 }
-
 
 .carousel-image-2 {
-    background: url('../img/image2.jpg');
+    background: url("../img/image2.jpg");
     background-size: cover;
 }
 
-
 .carousel-image-3 {
-    background: url('../img/image3.jpg');
+    background: url("../img/image3.jpg");
     background-size: cover;
 }
 
 #home-heading {
     position: relative;
     min-height: 200px;
-    background: url('../img/lights.jpg');
+    background: url("../img/lights.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
@@ -58,7 +54,7 @@ body {
 #video-play {
     position: relative;
     min-height: 200px;
-    background: url('../img/media.jpg');
+    background: url("../img/media.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: 0 -300px;
@@ -66,7 +62,20 @@ body {
     color: white;
 }
 
-
 #video-play a {
     color: white;
+}
+
+#page-header {
+    height: 200px;
+    background: url("../img/image1.jpg");
+    background-attachment: fixed;
+    background-position: 0 -360px;
+    color: white;
+    border-bottom: 1px #eee solid;
+    padding-top: 50px;
+}
+
+.about-img {
+    margin-top: -50px;
 }
