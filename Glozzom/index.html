@@ -15,6 +15,10 @@
   <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css"
+    integrity="sha256-HAaDW5o2+LelybUhfuk0Zh2Vdk8Y2W2UeKmbaXhalfA=" crossorigin="anonymous" />
+
+
   <link rel="stylesheet" href="css/style.css">
   <title>Bootstrap Theme</title>
 </head>
@@ -146,7 +150,6 @@
   </section>
 
   <!-- INFO SECTION -->
-
   <section id="info" class="info py-3">
     <div class="container">
       <div class="row">
@@ -162,7 +165,6 @@
       </div>
     </div>
   </section>
-
   <!-- VIDEO PLAY -->
   <section id="video-play">
     <div class="dark-overlay">
@@ -179,6 +181,88 @@
       </div>
     </div>
   </section>
+  <!-- PHOTO GALLERY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h1 class="text-center">Photo Gallery</h1>
+      <p class="text-center">Check Out Our Photos</p>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <a href="http://source.unsplash.com/random/560x560" data-toggle="lightbox" data-gallery="img-gallery"
+            data-height="560" data-width="560">
+            <img src="http://source.unsplash.com/random/560x560" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="http://source.unsplash.com/random/561x561" data-toggle="lightbox" data-gallery="img-gallery"
+            data-height="561" data-width="561">
+            <img src="http://source.unsplash.com/random/561x561" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="http://source.unsplash.com/random/562x562" data-toggle="lightbox" data-gallery="img-gallery"
+            data-height="562" data-width="562">
+            <img src="http://source.unsplash.com/random/562x562" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div>
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <a href="http://source.unsplash.com/random/563x563" data-toggle="lightbox" data-gallery="img-gallery"
+            data-height="563" data-width="563">
+            <img src="http://source.unsplash.com/random/563x563" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="http://source.unsplash.com/random/564x564" data-toggle="lightbox" data-gallery="img-gallery"
+            data-height="564" data-width="564">
+            <img src="http://source.unsplash.com/random/564x564" alt="" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-md-4">
+          <a href="http://source.unsplash.com/random/565x565" data-toggle="lightbox" data-gallery="img-gallery"
+            data-height="565" data-width="565">
+            <img src="http://source.unsplash.com/random/565x565" alt="" class="img-fluid">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- NEWSLETTER -->
+  <section id="newsletter" class="text-center p-5 bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Sign Up For Our Newsletter</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa labore ea officia eius praesentium
+            sunt odio sapiente veniam saepe.</p>
+          <form class="form-inline justify-content-center">
+            <input type="text" class="form-control mb-2 mr-2" placeholder="Enter Name">
+            <input type="email" class="form-control mb-2 mr-2" placeholder="Enter Email">
+            <button class="btn btn-primary mb-2">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="main-footer" class="text-center p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <p>Copyright &copy; <span id="year"></span>Glozzom </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+
 
   <!-- VIDEO-MODAL -->
   <div class="modal fade" id="videoModal">
@@ -193,9 +277,6 @@
       </div>
     </div>
   </div>
-
-
-
 
   <script src="http://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -218,6 +299,10 @@
     crossorigin="anonymous"></script>
 
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"
+    integrity="sha256-Y1rRlwTzT5K5hhCBfAFWABD4cU13QGuRN6P5apfWzVs=" crossorigin="anonymous"></script>
+
+
   <script>
     // Get the current year for the copyright
     $('#year').text(new Date().getFullYear());
@@ -228,6 +313,12 @@
       interval: 6000,
       pause: 'hover'
     })
+
+    //lightbox
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
 
     // Video Play
     $(function () {
